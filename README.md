@@ -7,7 +7,7 @@ Descriptions: You are a senior developer in an entertainment content provider, N
 recommendations. In particular, you will need to implement various methods in the MovieApp class in MovieApp.java         
 ● User and Movie classes are provided in User.java and Movie.java, respectively      
 
-Function 1: Basic Methods for MovieApp Class    
+# Function 1: Basic Methods for MovieApp Class    
 
 Objectives: Implement the addMovie , addUser , findMovie , and findUser methods of the MovieApp class.          
 Descriptions: The MovieApp class manages the information of all movies and users. As a start, I implemented the following four basic methods to add/find movies/users inside the
@@ -24,7 +24,7 @@ To implement these methods, you will need to decide on the appropriate collectio
 ● public User findUser(String username) returns a User object with the given username .          
 ○ Return null if there is no user with the given username .      
 
-Function 2: Movie Searching with Tags     
+# Function 2: Movie Searching with Tags     
 Objectives: Implement the findMoviesWithTags method of the MovieApp class.    
 Descriptions: Implement the method to search for the movies matching the given tags.       
 ● Implement the public List<Movie> findMoviesWithTags(String[] tags) method.      
@@ -37,7 +37,7 @@ Descriptions: Implement the method to search for the movies matching the given t
 ○ If the empty String array is given as a tags argument, the empty list should be returned.     
   
   
-Function 3: Movie Rating         
+# Function 3: Movie Rating         
 
 Objectives: Implement the rateMovie , getUserRating methods of the MovieApp class.       
 Descriptions: I implemented two methods: (1) to rate a movie and (2) to get a rating.         
@@ -56,7 +56,7 @@ Decide on an appropriate collection to store the rating information.
 ○ If the user or the movie with the title is null or not registered, return -1,          
 ○ If the user has not rated the movie, return 0.        
 
-Function 4: Movie Recommendation       
+# Function 4: Movie Recommendation       
 Objectives: Implementing the recommend and findUserMoviesWithTags methods of the MovieApp class.     
 Descriptions: I implemented a method to recommend movies using a user's search history.         
 ● As the first step, it is needed to implement the public List<Movie> findUserMoviesWithTags(User user, String[] tags) method to store the search history of a user.     
