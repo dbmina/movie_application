@@ -13,7 +13,6 @@ public class MovieApp {
 ArrayList<Movie> movielist=new ArrayList<Movie>();
    ArrayList<User> userlist=new ArrayList<User>();
     public boolean addMovie(String title, String[] tags) {
-        // TODO sub-problem 1
     	
     	for(Movie movie: movielist) {
     		if (movie.getTitle().equals(title)) {
@@ -26,7 +25,6 @@ ArrayList<Movie> movielist=new ArrayList<Movie>();
     }
 
     public boolean addUser(String name) {
-        // TODO sub-problem 1
     	for(User user: userlist) {
     		if (user.getUsername().equals(name)) {
     			return false;
@@ -38,7 +36,6 @@ ArrayList<Movie> movielist=new ArrayList<Movie>();
     }
 
     public Movie findMovie(String title) {
-        // TODO sub-problem 1
     for (Movie movie: movielist) {
     	if (movie.getTitle().equals(title)) {
     		return movie;
@@ -48,7 +45,6 @@ ArrayList<Movie> movielist=new ArrayList<Movie>();
     }
 
     public User findUser(String username) {
-        // TODO sub-problem 1
        for (User user:userlist) {
     	   if (user.getUsername().equals(username)) {
     		   return user;
@@ -58,7 +54,6 @@ ArrayList<Movie> movielist=new ArrayList<Movie>();
     }
 
     public List<Movie> findMoviesWithTags(String[] tags) {
-        // TODO sub-problem 2
     	ArrayList<Movie> movie_list=new ArrayList<Movie>();
     	if (tags.length==0) {
     		return movie_list;
@@ -86,8 +81,6 @@ ArrayList<Movie> movielist=new ArrayList<Movie>();
     }
     HashSet<Rate> hashset=new HashSet<Rate>();
     public boolean rateMovie(User user, String title, int rating) {
-        // TODO sub-problem 3
-    	
     	if (title==null || findMovie(title)==null) {
     		return false;
     	}
@@ -116,7 +109,6 @@ ArrayList<Movie> movielist=new ArrayList<Movie>();
     }
 
     public int getUserRating(User user, String title) {
-        // TODO sub-problem 3
        if (user==null ||findMovie(title)==null||title==null) {
     	   return -1;
        }
@@ -134,7 +126,6 @@ ArrayList<Movie> movielist=new ArrayList<Movie>();
     }
     HashMap<User, List<Movie>> user_movie=new HashMap<User, List<Movie>>();
     public List<Movie> findUserMoviesWithTags(User user, String[] tags) {
-        // TODO sub-problem 4'
     	if (user==null || findUser(user.getUsername())==null) {
     		return new LinkedList<Movie>();
     	}
@@ -151,7 +142,6 @@ ArrayList<Movie> movielist=new ArrayList<Movie>();
     }
     boolean sorting=false;
     public List<Movie> recommend(User user) {
-        // TODO sub-problem 4\
     	if (user==null || findUser(user.getUsername())==null) {
     		return new LinkedList<Movie>();
     	}
@@ -185,7 +175,6 @@ ArrayList<Movie> movielist=new ArrayList<Movie>();
     	list.addAll(mv_av.keySet());
     	
     	Comparator<Movie> comp=new Comparator<Movie>() {
-
 			@Override
 			public int compare(Movie o1, Movie o2) {
 				if (mv_av.get(o1)>mv_av.get(o2)) {
@@ -204,7 +193,6 @@ ArrayList<Movie> movielist=new ArrayList<Movie>();
     	Collections.sort(list, comp);
 
     	
-    	
     	if (sorting) {
     		Collections.sort(possible_list);
     		if (possible_list.size()>3) {
@@ -216,7 +204,6 @@ ArrayList<Movie> movielist=new ArrayList<Movie>();
     		}
     		
     			return possible_list;
-    		
     	}
     	else {
     	if (list.size()>3) {
